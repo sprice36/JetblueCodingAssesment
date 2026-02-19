@@ -104,7 +104,7 @@ export const useOriginAirports = () => {
 
     fetchOrigins();
   }, []);
-
+  console.log('origins', origins);
   return { origins, loading, error };
 };
 

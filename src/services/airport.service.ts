@@ -25,6 +25,7 @@ export class AirportService {
    */
   async getOriginAirports(): Promise<(string | boolean)[]> {
     const airports = await this.getAllAirports();
+    console.log('airports', airports);
     return getUniqueValues(airports, 'OriginAirportCode');
   }
 

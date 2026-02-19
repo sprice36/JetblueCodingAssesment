@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   const [filters, setFilters] = useState<RouteFilters>({});
 
   // TODO: Use the custom hooks
-  // const { origins, loading: originsLoading, error: originsError } = useOriginAirports();
+  const { origins, loading: originsLoading, error: originsError } = useOriginAirports();
 
   // const { destinations, loading: destinationsLoading } = useDestinations(selectedOrigin);
 
@@ -44,7 +44,7 @@ const Home: React.FC = () => {
       <h2>Flight Routes Explorer</h2>
 
       {/* TODO: Origin Airport Dropdown */}
-      {/* <div className="form-group">
+      <div className="form-group">
         <label htmlFor="origin-select">Select Origin Airport:</label>
         <select
           id="origin-select"
@@ -54,15 +54,15 @@ const Home: React.FC = () => {
         >
           <option value="">Choose an origin airport...</option>
           {/* TODO: Map over origins */}
-         {/* {origins?.map((origin) => { */}
-          {/* return (
+         {origins?.map((origin) => {
+          return (
             <option>
               {origin}
             </option>
           )
          })}
         </select>
-      </div>  */}
+      </div> 
 
       {/* TODO: Filter Checkboxes */}
       {/* <div className="filters-section">
