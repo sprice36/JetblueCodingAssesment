@@ -3,6 +3,8 @@
 
 import React, { useState } from 'react';
 // import { useOriginAirports, useDestinations, useFilteredRoutes } from '../hooks/useAirports';
+import { useOriginAirports } from '../hooks/useAirports';
+
 // import { filterByMultipleConditions } from '../utils/array.utils';
 import type { RouteFilters } from '../types/airport.types';
 
@@ -42,7 +44,7 @@ const Home: React.FC = () => {
       <h2>Flight Routes Explorer</h2>
 
       {/* TODO: Origin Airport Dropdown */}
-      <div className="form-group">
+      {/* <div className="form-group">
         <label htmlFor="origin-select">Select Origin Airport:</label>
         <select
           id="origin-select"
@@ -52,11 +54,18 @@ const Home: React.FC = () => {
         >
           <option value="">Choose an origin airport...</option>
           {/* TODO: Map over origins */}
+         {/* {origins?.map((origin) => { */}
+          {/* return (
+            <option>
+              {origin}
+            </option>
+          )
+         })}
         </select>
-      </div>
+      </div>  */}
 
       {/* TODO: Filter Checkboxes */}
-      <div className="filters-section">
+      {/* <div className="filters-section">
         <h3>Filters:</h3>
         <div className="checkbox-group">
           <div className="checkbox-item">
@@ -64,7 +73,7 @@ const Home: React.FC = () => {
               type="checkbox"
               id="seasonal"
               checked={filters.IsSeasonal || false}
-              // onChange={(e) => handleFilterChange('IsSeasonal', e.target.checked)}
+              onChange={(e) => handleFilterChange('IsSeasonal', e.target.checked)}
             />
             <label htmlFor="seasonal">Seasonal Routes Only</label>
           </div>
@@ -74,7 +83,7 @@ const Home: React.FC = () => {
               type="checkbox"
               id="jetblue"
               checked={filters.IsJetBlue || false}
-              // onChange={(e) => handleFilterChange('IsJetBlue', e.target.checked)}
+              onChange={(e) => handleFilterChange('IsJetBlue', e.target.checked)}
             />
             <label htmlFor="jetblue">JetBlue Routes Only</label>
           </div>
@@ -84,23 +93,23 @@ const Home: React.FC = () => {
               type="checkbox"
               id="interline"
               checked={filters.IsInterline || false}
-              // onChange={(e) => handleFilterChange('IsInterline', e.target.checked)}
+              onChange={(e) => handleFilterChange('IsInterline', e.target.checked)}
             />
             <label htmlFor="interline">Interline Routes Only</label>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* TODO: Destinations List */}
-      <div className="destinations-section">
+      {/* <div className="destinations-section">
         <h3>Available Destinations:</h3>
         {/* TODO: Show loading state */}
         {/* TODO: Show error state */}
         {/* TODO: Map over filtered destinations */}
-        <div className="destinations-grid">
+        {/* <div className="destinations-grid"> */}
           {/* TODO: Destination cards that navigate to details page */}
-        </div>
-      </div>
+        {/* </div> */}
+      {/* </div>  */}
     </div>
   );
 };

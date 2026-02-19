@@ -85,7 +85,7 @@ export const useAirports = () => {
  * This shows data transformation patterns
  */
 export const useOriginAirports = () => {
-  const [origins, setOrigins] = useState<string[]>([]);
+  const [origins, setOrigins] = useState<(string | boolean)[]>();
   const { loading, setLoading } = useLoading();
   const { error, handleError } = useError();
 

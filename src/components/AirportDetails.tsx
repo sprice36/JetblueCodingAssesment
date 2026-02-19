@@ -2,7 +2,7 @@
 // This is just a template to show the expected structure
 
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+// import { useParams, Link } from 'react-router-dom';
 // import { useAirportDetails } from '../hooks/useAirports';
 // import type { AirportDetails as AirportDetailsType } from '../types/airport.types';
 
@@ -29,7 +29,7 @@ const AirportDetails: React.FC = () => {
   return (
     <div className="airport-details-container">
       {/* TODO: Breadcrumb navigation */}
-      <nav className="breadcrumb">{<Link to="/">← Back to Routes</Link>}</nav>
+      {/* <nav className="breadcrumb">{<Link to="/">← Back to Routes</Link>}</nav> */}
 
       {/* TODO: Airport Details Content */}
       <div className="airport-details-content">

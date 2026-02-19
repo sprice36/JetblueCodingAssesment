@@ -1,5 +1,5 @@
 import { API_ENDPOINTS } from '../constants/airport.constants';
-import type { Airport, ApiResponse } from '../types/airport.types';
+import type { Airport, ApiResponse, AirportDetails } from '../types/airport.types';
 // import type { Airport, ApiResponse, AirportDetails } from '../types/airport.types';
 import { getUniqueValues } from '../utils/array.utils';
 import { apiService } from './api.service';
@@ -16,15 +16,15 @@ export class AirportService {
     const response = await apiService.get<ApiResponse<Airport>>(
       API_ENDPOINTS.AIRPORTS
     );
-    return response.airport ?? [];
+    return response.airport || [];
   }
 
   /**
    * ✅ IMPLEMENTED - Get unique origin airports
    * This shows how to process and transform data
    */
-  async getOriginAirports(): Promise<string[]> {
-    const airports = await this.getAllAirports() ?? null;
+  async getOriginAirports(): Promise<(string | boolean)[]> {
+    const airports = await this.getAllAirports();
     return getUniqueValues(airports, 'OriginAirportCode');
   }
 
