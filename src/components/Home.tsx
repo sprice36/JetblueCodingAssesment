@@ -48,7 +48,7 @@ const Home: React.FC = () => {
           id="origin-select"
           className="form-control"
           value={selectedOrigin || ''}
-          // onChange={(e) => handleOriginChange(e.target.value)}
+          onChange={(e) => handleOriginChange(e.target.value)}
         >
           <option value="">Choose an origin airport...</option>
           {/* TODO: Map over origins */}

@@ -26,7 +26,7 @@ export class AirportService {
   async getOriginAirports(): Promise<string[]> {
     const airports = await this.getAllAirports() ?? null;
     return getUniqueValues(airports, 'OriginAirportCode');
-=  }
+  }
 
   // ❌ TODO: Implement these methods for the assignment
   // Candidates should follow the patterns established above
